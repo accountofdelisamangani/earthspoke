@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EarthSpoke</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Arial, sans-serif;
+  background:#f7f9f8;
+  color:#1f2d27;
+  line-height:1.9;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:3000;
+  border-bottom:1px solid #e6ece9;
+}
+.nav-links a{
+  margin-left:28px;
+  cursor:pointer;
+  text-decoration:none;
+  color:#1f2d27;
+  font-weight:500;
+}
+
+/* HEADER */
+header{
+  width:100%;
+  min-height:60vh;
+  background:url("logo1.png") center/cover no-repeat;
+}
+@media(max-width:768px){
+  header{min-height:50vh;}
+}
+
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 24px;
+}
+.soft{
+  background:#fff;
+  border-radius:26px;
+  box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+h2{text-align:center;margin-bottom:24px;}
+p{max-width:900px;margin:auto;text-align:center;color:#34443d;}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:32px;
+  margin-top:40px;
+}
+.card{
+  background:#fff;
+  padding:36px;
+  border-radius:22px;
+  border:1px solid #eef2f0;
+}
+
+/* SLIDES */
+.slide{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  height:100%;
+  background:#f7f9f8;
+  z-index:6000;
+  transition:.6s ease;
+  overflow-y:auto;
+}
+.slide.active{right:0;}
+
+.slide nav{
+  position:sticky;
+  top:0;
+  background:#fff;
+  padding:20px;
+  border-bottom:1px solid #ddd;
+  z-index:7000;
+}
+
+/* BLOG */
+.blog{
+  max-width:900px;
+  margin:80px auto;
+}
+.blog img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:24px;
+}
+
+/* FOOTER */
+footer{
+  background:#1f2d27;
+  color:#fff;
+  text-align:center;
+  padding:36px;
+}
+footer img{width:28px;margin:0 10px;}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  width:60px;
+  height:60px;
+  z-index:8000;
+}
+.whatsapp img{width:100%;}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>EarthSpoke</strong></div>
+  <div class="nav-links">
+    <a onclick="openBlogs()">Blogs</a>
+    <a onclick="openFounder()">The Founder</a>
+    <a href="#founder-work">Founder Work</a>
+  </div>
+</nav>
+
+<header></header>
+
+<section class="soft">
+<h2>About us</h2>
+<p>
+EarthSpoke is a youth-led environmental initiative created to inspire responsibility,
+sustainability, and awareness among students. It believes real change begins when
+young voices are empowered to speak for the planet.
+</p>
+</section>
+
+<section>
+<h2>What We Do</h2>
+<div class="cards">
+<div class="card"><h3>Awareness</h3><p>Educating students through dialogue and action.</p></div>
+<div class="card"><h3>Sustainability</h3><p>Encouraging eco-friendly habits.</p></div>
+<div class="card"><h3>Community</h3><p>Building youth-driven environmental action.</p></div>
+</div>
+</section>
+
+<section id="founder-work" class="soft">
+<h2>Founder Work</h2>
+<div class="cards">
+<div class="card">
+<h3>Delisa Mangani</h3>
+<p>
+Only <strong>11 years old</strong>, Delisa actively communicates with students,
+leads discussions, and confidently represents EarthSpoke during awareness programs.
+Her extroverted nature allows EarthSpoke to reach young minds with clarity and energy.
+</p>
+</div>
+<div class="card">
+<h3>Jatin Mangani</h3>
+<p>
+Jatin works behind the scenes, managing structure, research, writing, and planning.
+Though introverted and initially nervous, his quiet consistency ensures EarthSpoke
+runs smoothly and grows with purpose.
+</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2025 EarthSpoke<br><br>
+<a href="https://www.facebook.com/earthspoke.in" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
+</a>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919711800971" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/124/124034.png">
+</a>
+
+<!-- BLOG SLIDE -->
+<div class="slide" id="blogs">
+<nav><a onclick="closeSlides()">← Back</a></nav>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+<h2>1. Why Sustainability Matters</h2>
+<p>
+Sustainability is not a trend—it is a responsibility. Every resource we use today
+affects the world tomorrow. From water conservation to mindful consumption,
+sustainability ensures balance between human needs and nature’s limits.
+</p>
+</div>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+<h2>2. The Power of Youth Voices</h2>
+<p>
+Young people possess energy, curiosity, and the courage to question existing systems.
+When youth speak for the environment, they influence families, schools, and communities.
+</p>
+</div>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<h2>3. Small Actions, Big Impact</h2>
+<p>
+Switching off lights, reducing plastic, and planting trees may seem small,
+but when multiplied by millions, they reshape the planet’s future.
+</p>
+</div>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
+<h2>4. Education as the Key</h2>
+<p>
+Environmental education empowers students to understand climate challenges
+and act responsibly. Awareness leads to long-term change.
+</p>
+</div>
+
+<div class="blog">
+<img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9">
+<h2>5. Hope for a Greener Tomorrow</h2>
+<p>
+Despite challenges, hope remains strong. When young initiatives rise,
+the future becomes greener, cleaner, and more compassionate.
+</p>
+</div>
+</div>
+
+<!-- FOUNDER SLIDE -->
+<div class="slide" id="founder">
+<nav><a onclick="closeSlides()">← Back</a></nav>
+<div class="blog">
+<h2>Delisa Mangani</h2>
+<p>
+At just 11 years old, Delisa represents courage, clarity, and youthful leadership.
+She speaks confidently with students, simplifies environmental ideas, and inspires
+others to care for nature without fear.
+</p>
+
+<h2>Jatin Mangani</h2>
+<p>
+Jatin is the quiet strength behind EarthSpoke. His planning, writing, and organization
+turn ideas into reality. Though introverted, his dedication ensures stability and growth.
+</p>
+</div>
+</div>
+
+<script>
+function openBlogs(){document.getElementById("blogs").classList.add("active");}
+function openFounder(){document.getElementById("founder").classList.add("active");}
+function closeSlides(){
+document.querySelectorAll(".slide").forEach(s=>s.classList.remove("active"));
+}
+</script>
+
+</body>
+</html>
